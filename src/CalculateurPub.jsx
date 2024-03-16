@@ -6,8 +6,7 @@ import BudgetPublicitaire from "./components/BudgetPublicitaire";
 import CPC from "./components/CPC";
 import CPA from "./components/CPA";
 import HeaderTitle from "./components/HeaderTitle";
-import './App.css';
-
+import "./App.css";
 
 function CalculateurPub() {
   const [panierMoyen, setPanierMoyen] = useState(100);
@@ -66,7 +65,15 @@ function CalculateurPub() {
   return (
     <>
       <HeaderTitle />
-      <div className="container mt-4 mb-4">
+      <div className="container mt-3">
+        <div className="row">
+          <div className="col-12 mt-3 text-center">
+            <p className="slogan" style={{fontSize : '20px'}}>Objectifs, rentabilité & stratégie publicitaire.</p>
+           {/*  <hr style={{margin : 0}} /> */}
+          </div>
+        </div>
+      </div>
+      <div className="container mb-4">
         <form>
           <div className="row">
             <div className="col-md-8">
@@ -116,7 +123,7 @@ function CalculateurPub() {
             <div className="col-md-4">
               <div className="card mt-2">
                 <div className="card-header text-center">
-                  <h2 style={{ color: "#1F3164" }}>Définir ses enchères</h2>
+                  <h2 style={{ color: "#1F3164" }}>Stratégies d'enchères</h2>
                 </div>
                 <div className="card-body">
                   <div className="row">

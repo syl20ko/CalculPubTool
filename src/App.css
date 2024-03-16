@@ -9,6 +9,10 @@
   font-family: 'Titillium Web', sans-serif !important;
 }
 
+.slogan {
+  font-size: 20px !important; /* Taille initiale du title pour les grands écrans */
+  font-family: 'Titillium Web', sans-serif !important;
+}
 
 @media (max-width: 575.98px) {
   .logoSylvain {
