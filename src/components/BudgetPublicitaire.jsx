@@ -8,9 +8,12 @@ const BudgetPublicitaire = ({
   budgetAllouePub
 }) => {
   return (
-    <div>
-      <h2><u>Définir le budget</u></h2>
-      <div>
+    <div className='card mt-2'>
+     <div className="card-header text-center">
+     <h2 style={{ color: '#1F3164'}}>Définir le budget</h2>
+     </div>
+     <div className="card-body">
+     <div>
         <p>
           {ventesNecessaires.toFixed(2)} Ventes nécessaires pour atteindre le bénéfice souhaité
         </p>
@@ -24,6 +27,7 @@ const BudgetPublicitaire = ({
         </p>
         <p> Budget alloué à la pub = {budgetAllouePub.toFixed(2)}€</p>
       </div>
+     </div>
     </div>
   );
 };

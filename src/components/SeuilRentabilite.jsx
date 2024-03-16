@@ -6,11 +6,15 @@ const SeuilRentabilit = ({ tauxDeMarge, roasLimit, roasLimitPercent, gain, panie
   const caMinimal = ventesMinimales * panierMoyen;
 
   return (
-    <div>
-      <h2>
-        <u>Point mort (seuil de rentabilité publicitaire)</u>
+    <div className='card mt-2'>
+     <div className="card-header text-center">
+     <h2 style={{ color: '#1F3164'}}>
+      Point mort
       </h2>
-      <div>
+     </div>
+     
+      <div className='card-body'>
+      <p className='text-center'>  <small>(seuil de rentabilité publicitaire)</small></p>
         <p>
           Avec les données ci-dessous, vous ne perdez pas d'argent mais n'en gagnez pas non-plus.
         </p>

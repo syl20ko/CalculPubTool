@@ -59,62 +59,83 @@ function CalculateurPub() {
   const roasLimitPercent = tauxDeMarge
     ? Math.round((1 / tauxDeMarge) * 100 * 100)
     : "N/A";
-  // Dans CalculateurPub, lors du calcul de tauxMargeReel
-  // Calculs pour enchérir manuellement
-  const visiteursParVente = 100 / tauxConversion;
-  const cpcMax = panierMoyen / visiteursParVente;
-  const cpcFinal = cpcMax * (tauxCoutPublicitaire / 100);
 
   return (
-    <div>
+    <div className="container mt-4 mb-4">
       <form>
-        <VosInformations
-          panierMoyen={panierMoyen}
-          setPanierMoyen={setPanierMoyen}
-          gain={gain}
-          handleGainChange={handleGainChange}
-          tauxDeMarge={tauxDeMarge}
-          handleInputChange={handleInputChange}
-          setTauxDeMarge={setTauxDeMarge}
-        />
-        <SeuilRentabilite
-          tauxDeMarge={tauxDeMarge}
-          roasLimit={roasLimit}
-          roasLimitPercent={roasLimitPercent}
-          gain={gain}
-          panierMoyen={panierMoyen}
-        />
-        <ObjectifsPublicitaires
-          profitSouhaite={profitSouhaite}
-          setProfitSouhaite={setProfitSouhaite}
-          tauxCoutPublicitaire={tauxCoutPublicitaire}
-          setTauxCoutPublicitaire={setTauxCoutPublicitaire}
-          tauxMargeReel={tauxMargeReel.toFixed(2)}
-          gainReel={gainReel.toFixed(2)}
-          ventesNecessaires={ventesNecessaires.toFixed(2)}
-        />
-        <BudgetPublicitaire
-          ventesNecessaires={ventesNecessaires}
-          panierMoyen={panierMoyen}
-          caResultant={caResultant}
-          tauxCoutPublicitaire={tauxCoutPublicitaire}
-          budgetAllouePub={budgetAllouePub}
-        />
-        <h2>
-          <u>Définir ses enchères</u>
-        </h2>
-        <CPC
-          tauxConversion={tauxConversion}
-          setTauxConversion={setTauxConversion}
-          panierMoyen={panierMoyen}
-          tauxCoutPublicitaire={tauxCoutPublicitaire}
-        />
-
-<CPA
-          panierMoyen={panierMoyen}
-          tauxCoutPublicitaire={tauxCoutPublicitaire}
-        />
-     
+        <div className="row">
+          <div className="col-md-8">
+            <div className="row">
+              <div className="col-md-6">
+                <VosInformations
+                  panierMoyen={panierMoyen}
+                  setPanierMoyen={setPanierMoyen}
+                  gain={gain}
+                  handleGainChange={handleGainChange}
+                  tauxDeMarge={tauxDeMarge}
+                  handleInputChange={handleInputChange}
+                  setTauxDeMarge={setTauxDeMarge}
+                />
+              </div>
+              <div className="col-md-6">
+                <SeuilRentabilite
+                  tauxDeMarge={tauxDeMarge}
+                  roasLimit={roasLimit}
+                  roasLimitPercent={roasLimitPercent}
+                  gain={gain}
+                  panierMoyen={panierMoyen}
+                />
+              </div>
+              <div className="col-md-6">
+                <ObjectifsPublicitaires
+                  profitSouhaite={profitSouhaite}
+                  setProfitSouhaite={setProfitSouhaite}
+                  tauxCoutPublicitaire={tauxCoutPublicitaire}
+                  setTauxCoutPublicitaire={setTauxCoutPublicitaire}
+                  tauxMargeReel={tauxMargeReel.toFixed(2)}
+                  gainReel={gainReel.toFixed(2)}
+                  ventesNecessaires={ventesNecessaires.toFixed(2)}
+                />
+              </div>
+              <div className="col-md-6">
+                <BudgetPublicitaire
+                  ventesNecessaires={ventesNecessaires}
+                  panierMoyen={panierMoyen}
+                  caResultant={caResultant}
+                  tauxCoutPublicitaire={tauxCoutPublicitaire}
+                  budgetAllouePub={budgetAllouePub}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="card mt-2">
+              <div className="card-header text-center">
+                <h2 style={{ color: "#1F3164" }}>
+                  Définir ses enchères
+                </h2>
+              </div>
+              <div className="card-body">
+                <div className="row">
+                  <div className="col-md-6">
+                    <CPC
+                      tauxConversion={tauxConversion}
+                      setTauxConversion={setTauxConversion}
+                      panierMoyen={panierMoyen}
+                      tauxCoutPublicitaire={tauxCoutPublicitaire}
+                    />
+                  </div>
+                  <div className="col-md-6">
+                    <CPA
+                      panierMoyen={panierMoyen}
+                      tauxCoutPublicitaire={tauxCoutPublicitaire}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </form>
     </div>
   );

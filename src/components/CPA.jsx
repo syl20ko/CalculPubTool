@@ -6,9 +6,13 @@ const CPA = ({ panierMoyen, tauxCoutPublicitaire }) => {
 
   return (
     <div>
-        <hr />
-      <h3><i>2)Au CPA automatique</i></h3>
-      <p>
+    <p>
+    <h5 style={{color : '#9b59b6'}}>B) CPA </h5>
+      <small style={{color : '#9b59b6'}}>Automatique</small>
+    </p>
+    <hr />
+    <div>
+    <p>
         <strong>Panier moyen (€) :</strong> {panierMoyen}€
       </p>
       <p>
@@ -26,6 +30,7 @@ const CPA = ({ panierMoyen, tauxCoutPublicitaire }) => {
       <p>
        <u>Conseil :</u> Commencez en cpc manuel puis après 50 conversions environ testez les enchères automatiques au CPA.
       </p>
+    </div>
     </div>
   );
 };
