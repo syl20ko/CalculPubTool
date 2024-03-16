@@ -6,6 +6,8 @@ import BudgetPublicitaire from "./components/BudgetPublicitaire";
 import CPC from "./components/CPC";
 import CPA from "./components/CPA";
 import HeaderTitle from "./components/HeaderTitle";
+import './App.css';
+
 
 function CalculateurPub() {
   const [panierMoyen, setPanierMoyen] = useState(100);
