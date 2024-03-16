@@ -5,6 +5,7 @@ import ObjectifsPublicitaires from "./components/ObjectifsPublicitaires";
 import BudgetPublicitaire from "./components/BudgetPublicitaire";
 import CPC from "./components/CPC";
 import CPA from "./components/CPA";
+import HeaderTitle from "./components/HeaderTitle";
 
 function CalculateurPub() {
   const [panierMoyen, setPanierMoyen] = useState(100);
@@ -61,83 +62,84 @@ function CalculateurPub() {
     : "N/A";
 
   return (
-    <div className="container mt-4 mb-4">
-      <form>
-        <div className="row">
-          <div className="col-md-8">
-            <div className="row">
-              <div className="col-md-6">
-                <VosInformations
-                  panierMoyen={panierMoyen}
-                  setPanierMoyen={setPanierMoyen}
-                  gain={gain}
-                  handleGainChange={handleGainChange}
-                  tauxDeMarge={tauxDeMarge}
-                  handleInputChange={handleInputChange}
-                  setTauxDeMarge={setTauxDeMarge}
-                />
-              </div>
-              <div className="col-md-6">
-                <SeuilRentabilite
-                  tauxDeMarge={tauxDeMarge}
-                  roasLimit={roasLimit}
-                  roasLimitPercent={roasLimitPercent}
-                  gain={gain}
-                  panierMoyen={panierMoyen}
-                />
-              </div>
-              <div className="col-md-6">
-                <ObjectifsPublicitaires
-                  profitSouhaite={profitSouhaite}
-                  setProfitSouhaite={setProfitSouhaite}
-                  tauxCoutPublicitaire={tauxCoutPublicitaire}
-                  setTauxCoutPublicitaire={setTauxCoutPublicitaire}
-                  tauxMargeReel={tauxMargeReel.toFixed(2)}
-                  gainReel={gainReel.toFixed(2)}
-                  ventesNecessaires={ventesNecessaires.toFixed(2)}
-                />
-              </div>
-              <div className="col-md-6">
-                <BudgetPublicitaire
-                  ventesNecessaires={ventesNecessaires}
-                  panierMoyen={panierMoyen}
-                  caResultant={caResultant}
-                  tauxCoutPublicitaire={tauxCoutPublicitaire}
-                  budgetAllouePub={budgetAllouePub}
-                />
+    <>
+      <HeaderTitle />
+      <div className="container mt-4 mb-4">
+        <form>
+          <div className="row">
+            <div className="col-md-8">
+              <div className="row">
+                <div className="col-md-6">
+                  <VosInformations
+                    panierMoyen={panierMoyen}
+                    setPanierMoyen={setPanierMoyen}
+                    gain={gain}
+                    handleGainChange={handleGainChange}
+                    tauxDeMarge={tauxDeMarge}
+                    handleInputChange={handleInputChange}
+                    setTauxDeMarge={setTauxDeMarge}
+                  />
+                </div>
+                <div className="col-md-6">
+                  <SeuilRentabilite
+                    tauxDeMarge={tauxDeMarge}
+                    roasLimit={roasLimit}
+                    roasLimitPercent={roasLimitPercent}
+                    gain={gain}
+                    panierMoyen={panierMoyen}
+                  />
+                </div>
+                <div className="col-md-6">
+                  <ObjectifsPublicitaires
+                    profitSouhaite={profitSouhaite}
+                    setProfitSouhaite={setProfitSouhaite}
+                    tauxCoutPublicitaire={tauxCoutPublicitaire}
+                    setTauxCoutPublicitaire={setTauxCoutPublicitaire}
+                    tauxMargeReel={tauxMargeReel.toFixed(2)}
+                    gainReel={gainReel.toFixed(2)}
+                    ventesNecessaires={ventesNecessaires.toFixed(2)}
+                  />
+                </div>
+                <div className="col-md-6">
+                  <BudgetPublicitaire
+                    ventesNecessaires={ventesNecessaires}
+                    panierMoyen={panierMoyen}
+                    caResultant={caResultant}
+                    tauxCoutPublicitaire={tauxCoutPublicitaire}
+                    budgetAllouePub={budgetAllouePub}
+                  />
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col-md-4">
-            <div className="card mt-2">
-              <div className="card-header text-center">
-                <h2 style={{ color: "#1F3164" }}>
-                  Définir ses enchères
-                </h2>
-              </div>
-              <div className="card-body">
-                <div className="row">
-                  <div className="col-md-6">
-                    <CPC
-                      tauxConversion={tauxConversion}
-                      setTauxConversion={setTauxConversion}
-                      panierMoyen={panierMoyen}
-                      tauxCoutPublicitaire={tauxCoutPublicitaire}
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <CPA
-                      panierMoyen={panierMoyen}
-                      tauxCoutPublicitaire={tauxCoutPublicitaire}
-                    />
+            <div className="col-md-4">
+              <div className="card mt-2">
+                <div className="card-header text-center">
+                  <h2 style={{ color: "#1F3164" }}>Définir ses enchères</h2>
+                </div>
+                <div className="card-body">
+                  <div className="row">
+                    <div className="col-md-6">
+                      <CPC
+                        tauxConversion={tauxConversion}
+                        setTauxConversion={setTauxConversion}
+                        panierMoyen={panierMoyen}
+                        tauxCoutPublicitaire={tauxCoutPublicitaire}
+                      />
+                    </div>
+                    <div className="col-md-6">
+                      <CPA
+                        panierMoyen={panierMoyen}
+                        tauxCoutPublicitaire={tauxCoutPublicitaire}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </form>
-    </div>
+        </form>
+      </div>
+    </>
   );
 }
 

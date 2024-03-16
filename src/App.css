@@ -1,3 +1,72 @@
+/* css for export */
+
+.logo {
+  width: 20%; /* Taille initiale du logo pour les grands écrans */
+}
+
+.titre {
+  font-size: 50px; /* Taille initiale du titre pour les grands écrans */
+  font-family: 'Titillium Web', sans-serif;
+}
+
+/* Très petits écrans (téléphones mobiles en mode portrait, moins de 576px) */
+@media (max-width: 575.98px) {
+  .logo {
+    width: 40%; /* Ajustez la taille du logo pour les très petits écrans */
+  }
+
+  .titre {
+    font-size: 20px; /* Ajustez la taille du titre pour les très petits écrans */
+  }
+}
+
+/* Petits écrans (téléphones mobiles en mode paysage, 576px et plus) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .logo {
+    width: 35%; /* Ajustez la taille du logo pour les petits écrans */
+  }
+
+  .titre {
+    font-size: 22px; /* Ajustez la taille du titre pour les petits écrans */
+  }
+}
+
+/* Écrans moyens (tablettes, 768px et plus) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .logo {
+    width: 30%; /* Ajustez la taille du logo pour les écrans moyens */
+  }
+
+  .titre {
+    font-size: 24px; /* Ajustez la taille du titre pour les écrans moyens */
+  }
+}
+
+/* Grands écrans (ordinateurs de bureau, 992px et plus) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .logo {
+    width: 25%; /* Ajustez la taille du logo pour les grands écrans */
+  }
+
+  .titre {
+    font-size: 40px; /* Ajustez la taille du titre pour les grands écrans */
+  }
+}
+
+/* Très grands écrans (grands ordinateurs de bureau, 1200px et plus) */
+@media (min-width: 1200px) {
+  .logo {
+    width: 20%; /* Retour à la taille initiale pour les très grands écrans */
+  }
+
+  .titre {
+    font-size: 50px; /* Retour à la taille initiale du titre pour les très grands écrans */
+  }
+}
+
+/* END css for export */
+
+
 .App {
   text-align: center;
 }
@@ -11,12 +80,6 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.madimi-one-regular {
-  font-family: "Madimi One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 
