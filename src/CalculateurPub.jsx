@@ -68,8 +68,10 @@ function CalculateurPub() {
       <div className="container mt-3">
         <div className="row">
           <div className="col-12 mt-3 text-center">
-            <p className="slogan" style={{fontSize : '20px'}}>Objectifs, rentabilité & stratégie publicitaire.</p>
-           {/*  <hr style={{margin : 0}} /> */}
+            <p className="slogan" style={{ fontSize: "20px" }}>
+              Objectifs, rentabilité & stratégie publicitaire.
+            </p>
+            {/*  <hr style={{margin : 0}} /> */}
           </div>
         </div>
       </div>
@@ -87,6 +89,8 @@ function CalculateurPub() {
                     tauxDeMarge={tauxDeMarge}
                     handleInputChange={handleInputChange}
                     setTauxDeMarge={setTauxDeMarge}
+                    tauxConversion={tauxConversion}
+                    setTauxConversion={setTauxConversion}
                   />
                 </div>
                 <div className="col-md-6">
@@ -96,6 +100,7 @@ function CalculateurPub() {
                     roasLimitPercent={roasLimitPercent}
                     gain={gain}
                     panierMoyen={panierMoyen}
+                    tauxConversion={tauxConversion}
                   />
                 </div>
                 <div className="col-md-6">

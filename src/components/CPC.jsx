@@ -23,30 +23,7 @@ const CPC = ({
       </p>
       <hr />
       <div>
-        <div
-          style={{
-            backgroundColor: "#27ae60",
-            borderRadius: "5%",
-            padding: "3px",
-          }}
-        >
-          <p
-            className="text-center"
-            style={{ color: "white", fontWeight: "bold" }}
-          >
-            <label className="pb-2">
-              Taux de conversion (%) de votre boutique
-            </label>
 
-            <input
-              className="form-control"
-              type="number"
-              value={tauxConversion}
-              onChange={(e) => setTauxConversion(Number(e.target.value))}
-              step="0.01"
-            />
-          </p>
-        </div>
         <br />
         <div
           style={{

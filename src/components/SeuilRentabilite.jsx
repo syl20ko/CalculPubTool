@@ -6,6 +6,7 @@ const SeuilRentabilit = ({
   roasLimitPercent,
   gain,
   panierMoyen,
+  tauxConversion
 }) => {
   // Calculs supplémentaires si nécessaire
   const ventesMinimales = 100 / gain;
@@ -22,23 +23,26 @@ const SeuilRentabilit = ({
           Avec les données ci-dessous, vous ne perdez pas d'argent mais vous n'en
           gagnez pas non-plus.
         </p>
-        <p style={{ textAlign: "center" }}>
-          (Mémo : calcul rapide du ROAS LIMIT : 1 / {(tauxDeMarge).toFixed(2)}%)
+        <p style={{ textAlign: "center", fontSize : '12px', fontStyle: 'italic' }}>
+          (Mémo : ROAS LIMIT = 1/{(tauxDeMarge).toFixed(2)}%)
         </p>
         <div className="alert alert-danger">
           <ul style={{ color: "#E1432E", fontWeight: "bold" }}>
             <li>
               {" "}
-              ROAS LIMIT : {roasLimit} ({roasLimitPercent}%)
+              ROAS LIMIT : <span style={{color : 'black'}}>{roasLimit} ({roasLimitPercent}%)</span>
             </li>
             <li>
               {" "}
-              Pour 100€ de pub, vous devez réaliser au moins{" "}
-              {ventesMinimales.toFixed(2)} ventes
+              Pour <span style={{color : 'black'}}>100€ de pub</span>, vous devez réaliser au moins{" "}
+              <span style={{color : 'black'}}>{ventesMinimales.toFixed(2)} ventes</span>
             </li>
             <li>
               {" "}
-              CA minimal à réaliser pour 100€ de pub : {caMinimal.toFixed(2)}€
+              CA minimal à réaliser pour <span style={{color : 'black'}}>100€ de pub</span> : <span  style={{color : 'black'}}>{caMinimal.toFixed(2)}€</span>
+            </li>
+            <li>
+              Avec un taux de conversion de <span style={{color : 'black'}}>{tauxConversion}%</span>, vous pouvez payer un clic <span style={{color : 'black'}}>{(gain*(tauxConversion/100)).toFixed(2)}€</span>
             </li>
           </ul>
         </div>
