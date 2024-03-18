@@ -42,7 +42,7 @@ Border: #9E9E9E
 Text: #000000 */
   const fieldStyleBlue = {
     backgroundColor: "#E8F0FE",
-    borderColor: "#1F3164",
+    borderColor: "#4C86F9",
     color: "#000",
     borderWidth: "2px",
     borderStyle: "solid",
@@ -53,7 +53,7 @@ Text: #000000 */
 
   const fieldStyleGreen = {
     backgroundColor: "#E6F4EA",
-    borderColor: "#2E8B57",
+    borderColor: "#49A84C",
     color: "#000",
     borderWidth: "2px",
     borderStyle: "solid",
@@ -77,7 +77,7 @@ Text: #000000 */
     <div className="card mt-2">
       {" "}
       <div className="card-header text-center">
-        <h2 style={{ color: "#1F3164" }}>Vos informations</h2>
+        <h2 style={{ color: "#1F3164" }}>Vos Informations</h2>
       </div>
       <div className="card-body">
         <div>
@@ -133,7 +133,7 @@ Text: #000000 */
         <div>
           <p>
             <label className="mb-2">
-              Taux de conversion (%) de votre boutique
+              Taux de conversion de votre boutique (%)
             </label>
 
             <input

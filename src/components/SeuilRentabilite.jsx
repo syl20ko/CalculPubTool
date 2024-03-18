@@ -20,11 +20,11 @@ const SeuilRentabilit = ({
 
       <div className="card-body">
         <p style={{ textAlign: "center",  color: "#E1432E" }}>
-          Avec les données ci-dessous, vous ne perdez pas d'argent mais vous n'en
+          Avec ces données, vous ne perdez pas d'argent mais vous n'en
           gagnez pas non-plus.
         </p>
         <p style={{ textAlign: "center", fontSize : '12px', fontStyle: 'italic' }}>
-          (Mémo : ROAS LIMIT = 1/{(tauxDeMarge).toFixed(2)}%)
+          (ROAS LIMIT = 1/{(tauxDeMarge).toFixed(2)}%)
         </p>
         <div className="alert alert-danger">
           <ul style={{ color: "#E1432E", fontWeight: "bold" }}>
