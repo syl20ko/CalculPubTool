@@ -92,7 +92,7 @@ const BudgetPublicitaire = ({
                 <br />= {budgetAllouePub.toFixed(2)}€
               </p>
               <p>
-                Ce budget publicitaire est mensuel si vous souhaité réaliser{" "}
+                Ce budget publicitaire est mensuel si vous souhaitez réaliser{" "}
                 {profitSouhaite}€ de bénéfices chaque mois.{" "}
               </p>
             </div>
