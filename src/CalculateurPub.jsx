@@ -116,6 +116,7 @@ function CalculateurPub() {
                 </div>
                 <div className="col-md-6">
                   <BudgetPublicitaire
+                    profitSouhaite={profitSouhaite}
                     ventesNecessaires={ventesNecessaires}
                     panierMoyen={panierMoyen}
                     caResultant={caResultant}
