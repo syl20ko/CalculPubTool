@@ -12,6 +12,13 @@
   
 }
 
+.card::after {
+  display: none; /* Ajoutez cette ligne pour cacher par défaut */
+}
+.card.with-label::after {
+  display: block; /* Seulement afficher si .with-label est présent */
+}
+
 .card::after{
   position:absolute;
   content:attr(data-label);

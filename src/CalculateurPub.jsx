@@ -127,7 +127,7 @@ function CalculateurPub() {
               </div>
             </div>
             <div className="col-md-4">
-              <div className="card mt-2" data-label="Étape 5">
+              <div className="card with-label mt-2" data-label="Étape 5">
                 <div className="card-header text-center">
                    <h2 style={{ color: "#1F3164"}}>Stratégies</h2>
                 </div>

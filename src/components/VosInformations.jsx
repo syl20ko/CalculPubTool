@@ -46,7 +46,7 @@ const VosInformations = ({
   };
 
   return (
-    <div className="card mt-2" data-label="Étape 1">
+    <div className="card with-label mt-2" data-label="Étape 1">
       <div className="card-header text-center">
          <h2 style={{ color: "#1F3164"}}>Vos Informations</h2>
       </div>

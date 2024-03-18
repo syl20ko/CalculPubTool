@@ -13,7 +13,7 @@ const SeuilRentabilit = ({
   const caMinimal = ventesMinimales * panierMoyen;
 
   return (
-    <div className="card mt-2" data-label="Étape 2">
+    <div className="card with-label mt-2" data-label="Étape 2">
       <div className="card-header text-center">
          <h2 style={{ color: "#1F3164"}}>Seuil de Rentabilité</h2>
       </div>
