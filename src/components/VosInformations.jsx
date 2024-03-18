@@ -11,35 +11,7 @@ const VosInformations = ({
   tauxConversion,
   setTauxConversion,
 }) => {
-  // Style pour les champs corrélés
-  /*   Palette de Couleurs
 
-
-Jaune Pâle
-
-Background: #FFF9C4
-Border: #FDD835
-Text: #000000
-Lavande
-
-Background: #EEDDF2
-Border: #6A1B9A
-Text: #000000
-Pêche
-
-Background: #FFEEDF
-Border: #FFAB91
-Text: #000000
-Aqua
-
-Background: #E0F7FA
-Border: #00ACC1
-Text: #000000
-Gris Doux
-
-Background: #F5F5F5
-Border: #9E9E9E
-Text: #000000 */
   const fieldStyleBlue = {
     backgroundColor: "#E8F0FE",
     borderColor: "#4C86F9",
@@ -74,10 +46,9 @@ Text: #000000 */
   };
 
   return (
-    <div className="card mt-2">
-      {" "}
+    <div className="card mt-2" data-label="Étape 1">
       <div className="card-header text-center">
-        <h2 style={{ color: "#1F3164" }}>Vos Informations</h2>
+         <h2 style={{ color: "#1F3164"}}>Vos Informations</h2>
       </div>
       <div className="card-body">
         <div>

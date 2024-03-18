@@ -48,9 +48,9 @@ const ObjectifsPublicitaires = ({
   }; */
 
   return (
-    <div className="card mt-2">
+    <div className="card mt-2" data-label="Étape 3">
       <div className="card-header text-center">
-        <h2 style={{ color: "#1F3164" }}>Chiffrer Objectifs</h2>
+         <h2 style={{ color: "#1F3164"}}>Chiffrer Objectifs</h2>
       </div>
       <div className="card-body">
         <div>
