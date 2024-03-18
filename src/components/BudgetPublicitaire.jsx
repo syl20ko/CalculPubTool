@@ -26,20 +26,21 @@ const BudgetPublicitaire = ({
                 {profitSouhaite}€
               </span>{" "}
               de bénéfices
+              <br />
+              (coût pub inclu)
             </u>
           </p>
           <ul style={{ color: "#378239", fontWeight: "bold" }}>
             <li>
-              Réaliser{" "}
               <span style={{ color: "black" }}>
                 {ventesNecessaires.toFixed(2)}
               </span>{" "}
-              ventes
+              ventes nécessaires
             </li>
             <li>
-              Réaliser{" "}
+             
               <span style={{ color: "black" }}>{caResultant.toFixed(2)}€ </span>
-              de CA
+              de CA nécessaires
             </li>
           </ul>
           <hr />
@@ -55,7 +56,7 @@ const BudgetPublicitaire = ({
             className="text-center"
             style={{ color: "green", fontWeight: "bold", fontSize: "25px" }}
           >
-            = {budgetAllouePub.toFixed(2)}€
+            = <span style={{ color: "black", fontWeight: "bold", fontSize: "25px" }}>{budgetAllouePub.toFixed(2)}€</span>
           </p>
         </div>
 

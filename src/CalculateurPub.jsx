@@ -68,8 +68,14 @@ function CalculateurPub() {
       <div className="container mt-3">
         <div className="row">
           <div className="col-12 mt-3 text-center">
-            <p className="slogan" style={{ fontSize: "20px" }}>
-              Objectifs, rentabilité & stratégie publicitaire.
+            <p className="slogan">
+              Objectifs, rentabilité & stratégies publicitaires
+             <br />  Google Ads {"     "}
+              <img
+            src="/CalculPubTool/adslogo.png"
+            className="logoAds"
+            alt="google ads"
+          />
             </p>
             {/*  <hr style={{margin : 0}} /> */}
           </div>
@@ -139,6 +145,7 @@ function CalculateurPub() {
                         setTauxConversion={setTauxConversion}
                         panierMoyen={panierMoyen}
                         tauxCoutPublicitaire={tauxCoutPublicitaire}
+                        gain={gain}
                       />
                     </div>
                     <div className="col-md-6">
